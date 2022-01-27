@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="estilo.css" />
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <title>Driven Eats</title>
+  </head>
+  <body>
+    <div class="app">
+      <nav>
+        <span id="titulo">DrivenEats</span
+        ><span id="sub-titulo">Sua comida em 6 minutos</span>
+      </nav>
+
+      <!--tela de confirmação-->
+      <div class="box-confirmando-pedido">
+        <div class="confirmando-pedido">
+          <div class="texto-de-confirmação">
+            <span> Confirmar Pedido </span>
+          </div>
+          <div class="caixa-de-confirmação">
+            <div class="texto-confirmacao-pedido">
+              <span id="primeiro-pedido">1</span>
+              <span id="segundo-pedido">2</span>
+              <span id="terceiro-pedido">3</span>
+              <span id="total">TOTAL</span>
+            </div>
+
+            <div class="texto-confirmacao-preco">
+              <span id="preco-primeiro-pedido">1</span>
+              <span id="preco-segundo-pedido">2</span>
+              <span id="preco-terceiro-pedido">3</span>
+              <span id="valor-total">6</span>
+            </div>
+          </div>
+          <button class="botao-confirmar-pedido" onclick="fazerPedido()">
+            <p>Tudo certo, pode pedir!</p>
+          </button>
+          <button class="botao-cancelar-pedido" onclick="cancelarPedido()">
+            <p>Cancelar</p>
+          </button>
+        </div>
+      </div>
+
+      <!-- Primeiro scroll -->
+      <div class="texto-pedido">
+        <span>Primeiro, seu prato</span>
+      </div>
+      <div class="scroll-cards pratos" data-identifier="dishes">
+        <div
+          class="card-pedidos"
+          data-identifier="food-option"
+          onclick="selecionarPedidoPrato(this)"
+        >
+          <div class="img-pedidos">
+            <img src="Imgs/frango_yin_yang 3.png" />
+          </div>
+          <div class="nome-pedidos">
+            <span data-identifier="food-title">Frango Yin Yang</span>
+          </div>
+          <div class="descricao-do-pedidos">
+            <span>pouco de batata,</span><span> um pouco de salada</span>
+          </div>
+          <div class="preço-pratos" value="14.90" data-identifier="food-price">
+            R$ 14,90
+          </div>
+          <div class="icone"><img src="Imgs/Vector.png" /></div>
+        </div>
+
+        <div
+          class="card-pedidos"
+          data-identifier="food-option"
+          onclick="selecionarPedidoPrato(this)"
+        >
+          <div class="img-pedidos">
+            <img
+              src="https://soubh.uai.com.br/uploads/post/image/8723/main_175929_file-com-fritas.jpg"
+            />
+          </div>
+          <div class="nome-pedidos">
+            <span data-identifier="food-title">Filé com fritas</span>
+          </div>
+          <div class="descricao-do-pedidos">
+            <span>muita de batata,</span><span> um pouco de salada</span>
+          </div>
+          <div class="preço-pratos" value="52.30" data-identifier="food-price">
+            R$ 52.30
+          </div>
+          <div class="icone"><img src="Imgs/Vector.png" /></div>
+        </div>
+
+        <div
+          class="card-pedidos"
+          data-identifier="food-option"
+          onclick="selecionarPedidoPrato(this)"
+        >
+          <div class="img-pedidos">
+            <img
+              src="https://img.cybercook.com.br/receitas/416/como-fazer-yakisoba-1-840x480.jpeg?q=75"
+            />
+          </div>
+          <div class="nome-pedidos">
+            <span data-identifier="food-title">Yakissoba</span>
+          </div>
+          <div class="descricao-do-pedidos">
+            <span>Muito macarrão</span><span>Muita carne e camarão</span>
+          </div>
+          <div class="preço-pratos" value="75.50" data-identifier="food-price">
+            R$ 75,50
+          </div>
+          <div class="icone"><img src="Imgs/Vector.png" /></div>
+        </div>
+
+        <div
+          class="card-pedidos"
+          data-identifier="food-option"
+          onclick="selecionarPedidoPrato(this)"
+        >
+          <div class="img-pedidos">
+            <img
+              src="https://static-images.ifood.com.br/image/upload/t_low/pratos/1eccb619-167d-4569-907f-54674193036e/202107131413_3370_i.jpg"
+            />
+          </div>
+          <div class="nome-pedidos">
+            <span data-identifier="food-title">Churrasco</span>
+          </div>
+          <div class="descricao-do-pedidos">
+            <span>Espetinho</span><span> com farofa</span>
+          </div>
+          <div class="preço-pratos" value="10.00" data-identifier="food-price">
+            R$ 10,00
+          </div>
+          <img src="Imgs/Vector.png" class="icone" />
+        </div>
+
+        <div
+          class="card-pedidos"
+          data-identifier="food-option"
+          onclick="selecionarPedidoPrato(this)"
+        >
+          <div class="img-pedidos">
+            <img
+              src="https://pubimg.band.uol.com.br/files/15034cfd4c9c2beac09a.png"
+            />
+          </div>
+          <div class="nome-pedidos">
+            <span data-identifier="food-title">Estrogonofe</span>
+          </div>
+          <div class="descricao-do-pedidos">
+            <span>Muito molho,</span><span> e muito camarão</span>
+          </div>
+          <div class="preço-pratos" value="40.00" data-identifier="food-price">
+            R$ 40,00
+          </div>
+          <div class="icone"><img src="Imgs/Vector.png" /></div>
+        </div>
+      </div>
+      <!-- segundo scroll -->
+      <div class="texto-pedido">
+        <span>Agora, sua bebida</span>
+      </div>
+
+      <div class="scroll-cards bebidas" data-identifier="drinks">
+        <div
+          class="card-pedidos"
+          data-identifier="food-option"
+          onclick="selecionarPedidoBebida(this)"
+        >
+          <div class="img-pedidos">
+            <img src="Imgs/coquinha_gelada 3.png" />
+          </div>
+          <div class="nome-pedidos">
+            <span data-identifier="food-title">Coquinha gelada</span>
+          </div>
+          <div class="descricao-do-pedidos">
+            <span>Lata 350ml</span>
+          </div>
+          <div class="preço-bebida" value="4.90" data-identifier="food-price">
+            R$ 4,90
+          </div>
+          <div class="icone"><img src="Imgs/Vector.png" /></div>
+        </div>
+        <div
+          class="card-pedidos"
+          data-identifier="food-option"
+          onclick="selecionarPedidoBebida(this)"
+        >
+          <div class="img-pedidos">
+            <img
+              src="https://i.pinimg.com/564x/34/f9/b6/34f9b628c0ae16993978172110ae1de8.jpg"
+            />
+          </div>
+          <div class="nome-pedidos">
+            <span data-identifier="food-title">Pepsi</span>
+          </div>
+          <div class="descricao-do-pedidos">
+            <span>Lata 350ml</span>
+          </div>
+          <div class="preço-bebida" value="4.00" data-identifier="food-price">
+            R$ 4,00
+          </div>
+          <div class="icone"><img src="Imgs/Vector.png" /></div>
+        </div>
+        <div
+          class="card-pedidos"
+          data-identifier="food-option"
+          onclick="selecionarPedidoBebida(this)"
+        >
+          <div class="img-pedidos">
+            <img
+              src="https://www.hypeness.com.br/1/2018/09/coca-cola-de-vidro.jpg"
+            />
+          </div>
+          <div class="nome-pedidos">
+            <span data-identifier="food-title">Litrão de vidro</span>
+          </div>
+          <div class="descricao-do-pedidos">
+            <span>Garrafa 1L</span>
+          </div>
+          <div class="preço-bebida" value="6.00" data-identifier="food-price">
+            R$ 6,00
+          </div>
+          <div class="icone"><img src="Imgs/Vector.png" /></div>
+        </div>
+        <div
+          class="card-pedidos"
+          data-identifier="food-option"
+          onclick="selecionarPedidoBebida(this)"
+        >
+          <div class="img-pedidos">
+            <img
+              src="https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/77/1077069_guarana-tuchaua-champanhe-pet-2-litros_m1_637411496740613779.jpg"
+            />
+          </div>
+          <div class="nome-pedidos">
+            <span data-identifier="food-title">Tuchaua Geladinho</span>
+          </div>
+          <div class="descricao-do-pedidos">
+            <span>Garrafa 2L</span>
+          </div>
+          <div class="preço-bebida" value="7.00" data-identifier="food-price">
+            R$ 7,00
+          </div>
+          <div class="icone"><img src="Imgs/Vector.png" /></div>
+        </div>
+        <div
+          class="card-pedidos"
+          data-identifier="food-option"
+          onclick="selecionarPedidoBebida(this)"
+        >
+          <div class="img-pedidos">
+            <img
+              src="https://aliadosminimercado.com.br/media/catalog/product/cache/70/image/85e4522595efc69f496374d01ef2bf13/7/8/7891991015493.jpg"
+            />
+          </div>
+          <div class="nome-pedidos">
+            <span data-identifier="food-title">Original Geladíssima</span>
+          </div>
+          <div class="descricao-do-pedidos">
+            <span>Lata 350ml</span>
+          </div>
+          <div class="preço-bebida" value="3.40" data-identifier="food-price">
+            R$ 3,40
+          </div>
+          <div class="icone"><img src="Imgs/Vector.png" /></div>
+        </div>
+      </div>
+
+      <!-- terceiro scroll -->
+      <div class="texto-pedido">
+        <span>Por fim, sua sobremesa</span>
+      </div>
+      <div class="scroll-cards sobremesa" data-identifier="desserts">
+        <div
+          class="card-pedidos"
+          data-identifier="food-option"
+          onclick="selecionarPedidoSobremesa(this)"
+        >
+          <div class="img-pedidos">
+            <img src="Imgs/pudim 2.png" />
+          </div>
+          <div class="nome-pedidos">
+            <span data-identifier="food-title">Pudim</span>
+          </div>
+          <div class="descricao-do-pedidos">
+            <span>Apenas pudim</span>
+          </div>
+          <div
+            class="preço-sobremesa"
+            value="7.90"
+            data-identifier="food-price"
+          >
+            R$ 7,90
+          </div>
+          <div class="icone"><img src="Imgs/Vector.png" /></div>
+        </div>
+        <div
+          class="card-pedidos"
+          data-identifier="food-option"
+          onclick="selecionarPedidoSobremesa(this)"
+        >
+          <div class="img-pedidos">
+            <img src="Imgs/pudim 2.png" />
+          </div>
+          <div class="nome-pedidos">
+            <span data-identifier="food-title">Pudim</span>
+          </div>
+          <div class="descricao-do-pedidos">
+            <span>Apenas pudim</span>
+          </div>
+          <div
+            class="preço-sobremesa"
+            value="7.90"
+            data-identifier="food-price"
+          >
+            R$ 7,90
+          </div>
+          <div class="icone"><img src="Imgs/Vector.png" /></div>
+        </div>
+        <div
+          class="card-pedidos"
+          data-identifier="food-option"
+          onclick="selecionarPedidoSobremesa(this)"
+        >
+          <div class="img-pedidos">
+            <img src="Imgs/pudim 2.png" />
+          </div>
+          <div class="nome-pedidos">
+            <span data-identifier="food-title">Pudim</span>
+          </div>
+          <div class="descricao-do-pedidos">
+            <span>Apenas pudim</span>
+          </div>
+          <div
+            class="preço-sobremesa"
+            value="7.90"
+            data-identifier="food-price"
+          >
+            R$ 7,90
+          </div>
+          <div class="icone"><img src="Imgs/Vector.png" /></div>
+        </div>
+        <div
+          class="card-pedidos"
+          data-identifier="food-option"
+          onclick="selecionarPedidoSobremesa(this)"
+        >
+          <div class="img-pedidos">
+            <img src="Imgs/pudim 2.png" />
+          </div>
+          <div class="nome-pedidos">
+            <span data-identifier="food-title">Pudim</span>
+          </div>
+          <div class="descricao-do-pedidos">
+            <span>Apenas pudim</span>
+          </div>
+          <div
+            class="preço-sobremesa"
+            value="7.90"
+            data-identifier="food-price"
+          >
+            R$ 7,90
+          </div>
+          <div class="icone"><img src="Imgs/Vector.png" /></div>
+        </div>
+        <div
+          class="card-pedidos"
+          data-identifier="food-option"
+          onclick="selecionarPedidoSobremesa(this)"
+        >
+          <div class="img-pedidos">
+            <img src="Imgs/pudim 2.png" />
+          </div>
+          <div class="nome-pedidos">
+            <span data-identifier="food-title">Pudim</span>
+          </div>
+          <div class="descricao-do-pedidos">
+            <span>Apenas pudim</span>
+          </div>
+          <div
+            class="preço-sobremesa"
+            value="7.90"
+            data-identifier="food-price"
+          >
+            R$ 7,90
+          </div>
+          <div class="icone"><img src="Imgs/Vector.png" /></div>
+        </div>
+      </div>
+
+      <div class="button-pedidos" onclick="confirmarPedido()">
+        <div class="caixa-texto">
+          <span>Selecione os 3 itens para fechar o pedido</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

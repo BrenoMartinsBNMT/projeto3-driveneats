@@ -1,0 +1,5 @@
+let a = "Olá, gostaria de fazer o pedido:"+"\n"
+"- Prato: Frango Yin Yang"+"\n"
+"- Bebida: Coquinha Gelada"+ "\n"
+"- Sobremesa: Pudim" + "\n"
+"Total: R$ 27.70"
